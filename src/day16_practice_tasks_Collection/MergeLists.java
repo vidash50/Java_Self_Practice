@@ -1,8 +1,6 @@
 package day16_practice_tasks_Collection;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class MergeLists {
     public static void main(String[] args) {
@@ -17,7 +15,11 @@ public class MergeLists {
                 30, 40, 50, 60, 70, 80, 90, 100
         ));
 
-        List<Integer> list3 = new ArrayList<>();
+        Set<Integer> set = new LinkedHashSet<>(list1);
+        set.addAll(list2);
+
+        List<Integer> list3 = new ArrayList<>(set);
+        System.out.println(list3);
 
 
 
